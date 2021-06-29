@@ -1,0 +1,40 @@
+<html>
+  <header>
+    <title>image switcher</title>
+  </header>
+  <body>
+  {% if dogs=="1" %}
+    <img src="{{url_for('static', filename='1.jpg')}}">
+  
+  {% endif %}
+
+  {% if dogs=="2" %}
+   <img src="{{url_for('static', filename='2.jpg')}}">
+   <p>{{dogs}} rule!</p>
+  {% endif %}
+ 
+  {% if dogs=="3" %}
+   <img src="{{url_for('static', filename='3.jpg')}}">
+  {% endif %}
+
+  {% if dogs=="4" %}
+    <img src="{{url_for('static', filename='4.jpg')}}">
+  {% endif %}
+     
+ <p>{{dogs}}</p> 
+ <form role="form" method='POST' action='#'>
+
+  <label for="dogs">Choose a dog:</label>
+  <select name="dogs" id="dogs">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+  <br><br>
+  <input type="submit" value="Submit">
+  </form>
+
+  </body>
+
+</html>
